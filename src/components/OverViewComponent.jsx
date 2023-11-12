@@ -1,30 +1,22 @@
 import React, { useState } from "react";
 import TransActionForm from "./TransActionForm";
 
-function OverViewComponent({ onAddNote }) {
+function OverViewComponent({
+  expenseAmount,
+  incomeAmount,
+  handleSubmit,
+  description,
+  setDescription,
+  amount,
+  setAmount,
+  setType,
+}) {
   const [open, setOpen] = useState(false);
 
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("");
-  const [type, setType] = useState("expense");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!amount || !description) return null;
-    const expense = {
-      amount,
-      description,
-      type,
-    };
-    onAddNote(expense);
-    setAmount("");
-    setDescription("");
-    setOpen(false);
-  };
   return (
     <>
       <div className="flex justify-between items-center mb-2">
-        <h2>Balance : 300</h2>
+        <h2>Balance : {incomeAmount - expenseAmount}</h2>
         {!open ? (
           <button
             onClick={() => setOpen(!open)}
@@ -49,17 +41,16 @@ function OverViewComponent({ onAddNote }) {
           setDescription={setDescription}
           description={description}
           handleSubmit={handleSubmit}
-          onAddNote={onAddNote}
         />
       )}
 
       <div className="flex justify-between mb-3">
         <div className="w-[48%] border border-slate-600 rounded-md px-2 py-1">
           Expense
-          <span className="block text-red-600 font-bold">0 $</span>
+          <span className="block text-red-600 font-bold">{expenseAmount} $</span>
         </div>
         <div className="w-[48%] border border-slate-600 rounded-md px-2 py-1">
-          income<span className="block text-green-600 font-bold">0 $</span>
+          income<span className="block text-green-600 font-bold">{incomeAmount} $</span>
         </div>
       </div>
     </>

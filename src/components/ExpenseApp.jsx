@@ -41,7 +41,7 @@ function ExpenseApp() {
   };
 
   return (
-    <div className="bg-white w-[90%] md:max-w-md mx-auto p-2 rounded-md border border-slate-600 text-xl sm:text-2xl">
+    <div className="bg-white w-[90%] md:max-w-lg mx-auto p-2 sm:p-3 rounded-md border border-slate-600 text-xl sm:text-2xl">
       <OverViewComponent
         onAddNote={handleAddNote}
         expenseAmount={expense}

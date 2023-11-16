@@ -13,7 +13,7 @@ function TransActionForm({
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="description"
-        className="border border-slate-600 w-full pl-2 py-1 rounded-md mb-1 outline-none"
+        className="border border-slate-600 w-full pl-2 py-1 rounded-md mb-1 sm:mb-2 sm:mt-2 outline-none"
         id="description"
       />
       <input
@@ -30,7 +30,7 @@ function TransActionForm({
           type="radio"
           name="type"
           value="expense"
-          className=""
+          className="w-4 h-4 sm:h-5 sm:w-5 mr-1"
           onChange={(e) => setType(e.target.value)}
           id="expense"
         />
@@ -39,7 +39,7 @@ function TransActionForm({
           type="radio"
           name="type"
           value="income"
-          className=""
+          className="w-4 h-4 sm:h-5 sm:w-5 mr-1"
           onChange={(e) => setType(e.target.value)}
           id="income"
         />
@@ -56,16 +56,3 @@ function TransActionForm({
 }
 
 export default TransActionForm;
-
-
-
-
-
-
-
-
-// cursor: text;
-// font-size: 14px;
-// line-height: 20px;
-// letter-spacing: 0px;
-

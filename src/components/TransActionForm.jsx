@@ -47,7 +47,7 @@ function TransActionForm({
       </div>
       <button
         type="submit"
-        className="bg-violet-700 rounded-md w-full py-1 mb-4 text-white"
+        className="bg-violet-700 rounded-md w-full py-1 mb-4 sm:py-2 text-white"
       >
         Add transaction
       </button>

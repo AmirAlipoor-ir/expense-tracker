@@ -22,7 +22,7 @@ function TransActionComponent({ note }) {
         value={searchInput}
         onChange={changeHandler}
         placeholder="search for tnx..."
-        className=""
+        className="bg-gray-300 placeholder:text-slate-600 text border border-slate-400 w-full pl-2 py-1 sm:py-2 rounded-md mb-5 sm:mb-5 sm:mt-2 outline-none"
       />
       {filterNote.map((i, index) => (
         <section key={index} className="mb-2">
